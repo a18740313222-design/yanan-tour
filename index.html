@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>延安周边包车游 | 5日精品路线</title>
+  <title>延安一日游包车 | 五座往返</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -18,7 +18,7 @@
     .hero {
       background: linear-gradient(135deg, #c0392b 0%, #e74c3c 30%, #f39c12 100%);
       color: #fff;
-      padding: 48px 24px 40px;
+      padding: 44px 20px 36px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -26,214 +26,226 @@
     .hero::after {
       content: '';
       position: absolute;
-      bottom: -30px;
+      bottom: -28px;
       left: -5%;
       width: 110%;
-      height: 60px;
+      height: 56px;
       background: #f5f0eb;
       border-radius: 50% 50% 0 0;
     }
-    .hero h1 {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-    }
-    .hero .subtitle {
-      font-size: 15px;
-      opacity: 0.9;
-      margin-bottom: 16px;
-    }
-    .hero .badge-list {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .hero h1 { font-size: 26px; font-weight: 800; letter-spacing: 2px; margin-bottom: 6px; }
+    .hero .subtitle { font-size: 14px; opacity: 0.9; margin-bottom: 14px; }
+    .hero .badge-list { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
     .hero .badge {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.22);
       backdrop-filter: blur(10px);
-      padding: 6px 16px;
+      padding: 5px 14px;
       border-radius: 20px;
-      font-size: 13px;
+      font-size: 12px;
       border: 1px solid rgba(255,255,255,0.3);
     }
 
     /* Section */
-    .section {
-      padding: 32px 20px;
-    }
+    .section { padding: 28px 18px; }
     .section-title {
       text-align: center;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       color: #c0392b;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       position: relative;
     }
     .section-title::after {
       content: '';
       display: block;
-      width: 40px;
+      width: 36px;
       height: 3px;
       background: #e74c3c;
-      margin: 8px auto 0;
+      margin: 6px auto 0;
       border-radius: 2px;
     }
 
     /* Route Cards */
-    .route-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .route-list { display: flex; flex-direction: column; gap: 14px; }
     .route-card {
       background: #fff;
       border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      padding: 18px 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
       position: relative;
-      transition: transform 0.2s;
+      border-left: 4px solid #e74c3c;
     }
-    .route-card:active { transform: scale(0.98); }
-    .route-card .day-badge {
-      position: absolute;
-      top: -8px;
-      left: 20px;
-      background: linear-gradient(135deg, #c0392b, #e74c3c);
-      color: #fff;
-      padding: 4px 16px;
-      border-radius: 12px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .route-card .route-path {
-      font-size: 15px;
-      color: #555;
-      margin-top: 8px;
+    .route-card .card-header {
       display: flex;
       align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-    .route-card .route-path .arrow {
-      color: #e74c3c;
-      font-weight: 700;
-    }
-    .route-card .spot-tag {
-      display: inline-block;
-      background: #fff3e0;
-      color: #e65100;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-size: 12px;
-      margin: 2px;
-    }
-    .route-card .km-badge {
-      font-size: 12px;
-      color: #999;
-      margin-top: 8px;
-    }
-
-    /* Benefits */
-    .benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .benefit-item {
-      background: #fff;
-      border-radius: 14px;
-      padding: 18px 14px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-    }
-    .benefit-item .icon {
-      font-size: 32px;
+      justify-content: space-between;
       margin-bottom: 8px;
     }
-    .benefit-item h4 {
-      font-size: 14px;
-      color: #c0392b;
-      margin-bottom: 4px;
+    .route-card .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #222;
     }
-    .benefit-item p {
-      font-size: 12px;
-      color: #999;
+    .route-card .price-tag {
+      background: linear-gradient(135deg, #c0392b, #e74c3c);
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .route-card .sub-spots {
+      font-size: 13px;
+      color: #888;
+      padding-left: 8px;
+      border-left: 2px solid #ffe0b2;
+      line-height: 1.7;
     }
 
-    /* CTA */
-    .cta-section {
-      padding: 24px 20px 40px;
-      text-align: center;
+    /* Show Cards */
+    .show-list { display: flex; flex-direction: column; gap: 14px; }
+    .show-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      border-left: 4px solid #f39c12;
     }
+    .show-card .show-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 6px;
+    }
+    .show-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-size: 13px;
+      border-bottom: 1px dashed #eee;
+    }
+    .show-row:last-child { border-bottom: none; }
+    .show-seat {
+      color: #666;
+      text-decoration: line-through;
+      font-size: 12px;
+    }
+    .show-price {
+      color: #c0392b;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* City Card */
+    .city-card {
+      background: linear-gradient(135deg, #fff5ee, #fff);
+      border-radius: 16px;
+      padding: 18px 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border: 2px solid #ffd4a3;
+    }
+    .city-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .city-name { font-size: 17px; font-weight: 700; color: #c0392b; }
+    .city-price {
+      background: #c0392b;
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .city-spots {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* Divider */
+    .divider {
+      text-align: center;
+      font-size: 11px;
+      color: #ccc;
+      letter-spacing: 4px;
+      margin: 4px 0;
+    }
+
+    /* Stars */
+    .stars { text-align: center; color: #f39c12; font-size: 24px; letter-spacing: 6px; margin: 16px 0 8px; }
+
+    /* CTA */
+    .cta-section { padding: 20px 18px 36px; text-align: center; }
     .cta-card {
       background: linear-gradient(135deg, #c0392b, #e74c3c);
       color: #fff;
       border-radius: 20px;
-      padding: 32px 24px;
-      box-shadow: 0 8px 30px rgba(192,57,43,0.3);
+      padding: 28px 20px;
+      box-shadow: 0 8px 28px rgba(192,57,43,0.3);
     }
-    .cta-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .cta-card .cta-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin-bottom: 24px;
-    }
+    .cta-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 6px; }
+    .cta-card p { font-size: 13px; opacity: 0.88; margin-bottom: 20px; }
     .cta-btn {
       display: inline-block;
       background: #fff;
       color: #c0392b;
-      padding: 14px 40px;
+      padding: 13px 38px;
       border-radius: 30px;
       font-size: 16px;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
       cursor: pointer;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     .cta-btn:active { transform: scale(0.95); }
 
-    /* Features */
-    .feature-row {
+    /* Contact Bar */
+    .contact-bar {
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .contact-row {
       display: flex;
-      justify-content: center;
-      gap: 32px;
-      margin-top: 24px;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 14px;
     }
-    .feature-item {
-      text-align: center;
-    }
-    .feature-item .feature-icon {
-      font-size: 24px;
-      margin-bottom: 4px;
-    }
-    .feature-item span {
+    .contact-icon { font-size: 20px; }
+    .copy-btn-sm {
+      margin-left: auto;
+      background: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 5px 14px;
+      border-radius: 14px;
       font-size: 12px;
-      opacity: 0.8;
+      cursor: pointer;
     }
 
     /* Footer */
     .footer {
       text-align: center;
-      padding: 24px;
+      padding: 20px;
       font-size: 12px;
       color: #bbb;
       border-top: 1px solid #eee;
-      margin-top: 16px;
     }
 
-    /* Inquiry Modal */
+    /* Modal */
     .modal-overlay {
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.55);
       z-index: 1000;
       align-items: center;
       justify-content: center;
@@ -242,16 +254,12 @@
     .modal {
       background: #fff;
       border-radius: 20px;
-      padding: 28px 24px;
+      padding: 26px 22px;
       width: 90%;
       max-width: 380px;
       text-align: center;
     }
-    .modal h4 {
-      font-size: 18px;
-      color: #c0392b;
-      margin-bottom: 16px;
-    }
+    .modal h4 { font-size: 18px; color: #c0392b; margin-bottom: 16px; }
     .modal .info-row {
       display: flex;
       align-items: center;
@@ -262,9 +270,7 @@
       margin-bottom: 10px;
       font-size: 14px;
     }
-    .modal .info-row .info-icon {
-      font-size: 20px;
-    }
+    .modal .info-icon { font-size: 20px; }
     .modal .copy-btn {
       margin-left: auto;
       background: #e74c3c;
@@ -276,7 +282,7 @@
       cursor: pointer;
     }
     .modal .close-btn {
-      margin-top: 16px;
+      margin-top: 14px;
       background: #eee;
       border: none;
       padding: 10px 32px;
@@ -291,8 +297,8 @@
 
   <!-- Hero -->
   <div class="hero">
-    <h1>🚐 延安周边包车游</h1>
-    <p class="subtitle">5日精品路线 · 老司机带路 · 纯玩无购物</p>
+    <h1>🚐 延安一日游往返包车</h1>
+    <p class="subtitle">五座舒适车型 · 老司机带路 · 纯玩无购物</p>
     <div class="badge-list">
       <span class="badge">⏰ 随走随停</span>
       <span class="badge">📸 自由拍照</span>
@@ -300,118 +306,182 @@
     </div>
   </div>
 
-  <!-- Route -->
+  <!-- 一日游路线 -->
   <div class="section">
-    <h2 class="section-title">📋 5日路线安排</h2>
+    <h2 class="section-title">📋 一日游精选路线</h2>
     <div class="route-list">
+
+      <!-- 1 壶口瀑布 -->
       <div class="route-card">
-        <div class="day-badge">Day 1</div>
-        <div class="route-path">
-          延安 <span class="arrow">→</span> <span class="spot-tag">黄河壶口瀑布</span> <span class="arrow">→</span> <span class="spot-tag">南泥湾</span>
+        <div class="card-header">
+          <span class="card-title">🌊 1.壶口瀑布</span>
+          <span class="price-tag">¥350</span>
         </div>
-        <div class="km-badge">📍 约 180km | ⏱ 全天</div>
+        <div class="sub-spots">南泥湾 • 观景台 • 知青旧居</div>
       </div>
 
+      <div class="divider">- - - - - - - - - - -</div>
+
+      <!-- 2 黄帝陵 -->
       <div class="route-card">
-        <div class="day-badge">Day 2</div>
-        <div class="route-path">
-          延安 <span class="arrow">→</span> <span class="spot-tag">黄帝陵</span> <span class="arrow">→</span> <span class="spot-tag">轩辕庙</span>
+        <div class="card-header">
+          <span class="card-title">⛰️ 2.黄帝陵</span>
+          <span class="price-tag">¥350</span>
         </div>
-        <div class="km-badge">📍 约 140km | ⏱ 全天</div>
+        <div class="sub-spots">轩辕庙 • 人文始祖祭拜圣地</div>
       </div>
 
+      <div class="divider">- - - - - - - - - - -</div>
+
+      <!-- 4 乾坤湾 -->
       <div class="route-card">
-        <div class="day-badge">Day 3</div>
-        <div class="route-path">
-          延安 <span class="arrow">→</span> <span class="spot-tag">宝塔山</span> <span class="arrow">→</span> <span class="spot-tag">枣园</span> <span class="arrow">→</span> <span class="spot-tag">杨家岭</span>
+        <div class="card-header">
+          <span class="card-title">🌀 4.乾坤湾</span>
+          <span class="price-tag">¥350</span>
         </div>
-        <div class="km-badge">📍 市区景点 | ⏱ 全天</div>
+        <div class="sub-spots">梁家河 • 文安驿</div>
       </div>
 
+      <div class="divider">- - - - - - - - - - -</div>
+
+      <!-- 5 雨岔大峡谷 -->
       <div class="route-card">
-        <div class="day-badge">Day 4</div>
-        <div class="route-path">
-          延安 <span class="arrow">→</span> <span class="spot-tag">梁家河</span> <span class="arrow">→</span> <span class="spot-tag">乾坤湾</span>
+        <div class="card-header">
+          <span class="card-title">🏞️ 5.雨岔大峡谷</span>
+          <span class="price-tag">¥260</span>
         </div>
-        <div class="km-badge">📍 约 200km | ⏱ 建议早出发</div>
+        <div class="sub-spots">中国版羚羊谷 • 光影奇观</div>
       </div>
 
+      <div class="divider">- - - - - - - - - - -</div>
+
+      <!-- 6 波浪谷 -->
       <div class="route-card">
-        <div class="day-badge">Day 5</div>
-        <div class="route-path">
-          延安 <span class="arrow">→</span> <span class="spot-tag">甘泉大峡谷</span> <span class="arrow">→</span> <span class="spot-tag">波浪谷</span>
+        <div class="card-header">
+          <span class="card-title">🎨 6.波浪谷</span>
+          <span class="price-tag">¥450</span>
         </div>
-        <div class="km-badge">📍 约 220km | ⏱ 全天（往靖边方向）</div>
+        <div class="sub-spots">丹霞地貌 • 网红打卡地</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 市内景区 -->
+  <div class="section" style="padding-top: 8px;">
+    <h2 class="section-title">🏙️ 市内景区</h2>
+    <div class="city-card">
+      <div class="city-header">
+        <span class="city-name">红色经典线路</span>
+        <span class="city-price">¥150起</span>
+      </div>
+      <div class="city-spots">
+        王家坪旧址 • 革命纪念馆<br>
+        杨家岭旧址 — 枣园旧址 — 宝塔山
       </div>
     </div>
   </div>
 
-  <!-- Benefits -->
-  <div class="section">
-    <h2 class="section-title">🚐 为什么选包车？</h2>
-    <div class="benefits">
-      <div class="benefit-item">
-        <div class="icon">🗺</div>
-        <h4>景点分散不怕</h4>
-        <p>周边景点无直达车</p>
+  <!-- 大型演出 -->
+  <div class="section" style="padding-top: 8px;">
+    <h2 class="section-title">🎭 大型演出 · 包车优享价 · 提前预订</h2>
+    <div class="show-list">
+
+      <!-- 演出1 -->
+      <div class="show-card">
+        <div class="show-name">🔴 红街 + 再回延安</div>
+        <div class="show-row">
+          <span>原价 ¥238</span>
+          <span><span class="show-seat"></span> <span class="show-price">¥120</span></span>
+        </div>
       </div>
-      <div class="benefit-item">
-        <div class="icon">🧭</div>
-        <h4>老司机带路</h4>
-        <p>不用自己做攻略</p>
+
+      <div class="divider">- - - - - - - - - - -</div>
+
+      <!-- 演出2 金延安+延安保育院 -->
+      <div class="show-card">
+        <div class="show-name">🟠 金延安 + 延安保育院</div>
+        <div class="show-row">
+          <span>蓝色东西区 <span class="show-seat">¥238</span></span>
+          <span class="show-price">¥90</span>
+        </div>
+        <div class="show-row">
+          <span>黄色中区 <span class="show-seat">¥298</span></span>
+          <span class="show-price">¥105</span>
+        </div>
+        <div class="show-row">
+          <span>红色贵宾区 <span class="show-seat">¥398</span></span>
+          <span class="show-price">¥160</span>
+        </div>
       </div>
-      <div class="benefit-item">
-        <div class="icon">📸</div>
-        <h4>随走随停</h4>
-        <p>拍照时间自己定</p>
+
+      <div class="divider">- - - - - - - - - - -</div>
+
+      <!-- 演出3 枣园1938+红秀 -->
+      <div class="show-card">
+        <div class="show-name">🟡 枣园1938 + 红秀《延安•延安》</div>
+        <div class="show-row">
+          <span>黄色东西区 <span class="show-seat">¥188</span></span>
+          <span class="show-price">¥90</span>
+        </div>
+        <div class="show-row">
+          <span>橙色东西前区 <span class="show-seat">¥238</span></span>
+          <span class="show-price">¥95</span>
+        </div>
+        <div class="show-row">
+          <span>绿色中区 <span class="show-seat">¥288</span></span>
+          <span class="show-price">¥125</span>
+        </div>
+        <div class="show-row">
+          <span>红色贵宾区 <span class="show-seat">¥388</span></span>
+          <span class="show-price">¥205</span>
+        </div>
       </div>
-      <div class="benefit-item">
-        <div class="icon">🎯</div>
-        <h4>灵活又省心</h4>
-        <p>比跟团自由比自驾省心</p>
-      </div>
+
     </div>
   </div>
 
-  <!-- CTA -->
+  <!-- Stars -->
+  <div class="stars">★ ★ ★ ★ ★</div>
+
+  <!-- CTA + Contact -->
   <div class="cta-section">
     <div class="cta-card">
-      <h3>💰 获取实时报价</h3>
-      <p class="cta-subtitle">具体报价看车型和天数<br>后台私信，给你实时报价！</p>
-      <button class="cta-btn" onclick="openInquiry()">📩 立即咨询路线</button>
-      <div class="feature-row">
-        <div class="feature-item">
-          <div class="feature-icon">✅</div>
-          <span>全程无购物</span>
+      <h3>📱 立即预约 / 咨询</h3>
+      <p>提前预订享优惠价，当天可能约满</p>
+      <button class="cta-btn" onclick="openInquiry()">📩 联系老司机</button>
+
+      <div class="contact-bar">
+        <div class="contact-row">
+          <span class="contact-icon">💬</span>
+          <span>微信：<strong>yaly0911</strong></span>
+          <button class="copy-btn-sm" onclick="copyText('yaly0911')">复制</button>
         </div>
-        <div class="feature-item">
-          <div class="feature-icon">✅</div>
-          <span>无套路</span>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">✅</div>
-          <span>纯玩到底</span>
+        <div class="contact-row">
+          <span class="contact-icon">📞</span>
+          <span>电话：<strong>18292121212</strong></span>
+          <button class="copy-btn-sm" onclick="copyText('18292121212')">拨打/复制</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Inquiry Modal -->
+  <!-- Modal -->
   <div class="modal-overlay" id="inquiryModal">
     <div class="modal">
       <h4>📞 联系老司机</h4>
-      <div class="info-row" id="wechatRow">
+      <div class="info-row">
         <span class="info-icon">💬</span>
-        <span>微信：<strong id="wechatId">yaly0911</strong></span>
+        <span>微信：<strong>yaly0911</strong></span>
         <button class="copy-btn" onclick="copyText('yaly0911')">复制</button>
       </div>
-      <div class="info-row" id="phoneRow">
+      <div class="info-row">
         <span class="info-icon">📞</span>
-        <span>电话：<strong id="phoneNumber">18292121212</strong></span>
-        <button class="copy-btn" onclick="copyText('138xxxxxxxx')">复制</button>
+        <span>电话：<strong>18292121212</strong></span>
+        <button class="copy-btn" onclick="copyText('18292121212')">复制</button>
       </div>
       <p style="font-size:12px;color:#999;margin-top:8px;">
-        或直接评论区扣「路线」<br>老司机帮你免费规划！
+        微信或电话均可，提前预订更优惠！
       </p>
       <button class="close-btn" onclick="closeInquiry()">关闭</button>
     </div>
@@ -420,7 +490,7 @@
   <!-- Footer -->
   <div class="footer">
     <p>📍 延安本地老司机 · 有问必答</p>
-    <p style="margin-top:4px;">#延安旅游 #延安包车 #壶口瀑布 #甘泉大峡谷</p>
+    <p style="margin-top:4px;">#延安旅游 #延安包车 #壶口瀑布 #雨岔大峡谷 #波浪谷</p>
   </div>
 
   <script>
